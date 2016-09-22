@@ -31,3 +31,9 @@ mMuxer.writeSampleData(mVideoTrackIndex, encodedData, mBufferInfo);
 所以其实在**Android 4.4**上可以通过`DisplayManager`来创建`VirtualDisplay`也是可以实现录屏，但因为权限限制需要**ROOT**。 (see [DisplayManager.createVirtualDisplay()][1])
 
 [1]: https://developer.android.com/reference/android/hardware/display/DisplayManager.html
+
+防止被录屏
+=====
+```
+getWindow().addFlags(WindowManager.LayoutParams.FLAG_SECURE);
+```
